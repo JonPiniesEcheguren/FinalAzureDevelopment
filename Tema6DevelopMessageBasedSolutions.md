@@ -83,13 +83,13 @@ Correct Answer: AB
 
 Explanation/Reference: 
 
-Explanation: The Azure Service Bus Queue and Topic has duplicate detection. Enabling duplicate detection helps keep track of the application-controlled MessageId of all messages sent into a queue or topic during a specified time window. 
+	Explanation: The Azure Service Bus Queue and Topic has duplicate detection. Enabling duplicate detection helps keep track of the application-controlled MessageId of all messages sent into a queue or topic during a specified time window. 
 
-Incorrect Answers: 
+	Incorrect Answers: 
 
-C: There is just no mechanism that can query a Storage queue and find out if a message with the same contents is already there or was there before. 
+	C: There is just no mechanism that can query a Storage queue and find out if a message with the same contents is already there or was there before. 
 
-D: Azure Event Hub does not have duplicate detection
+	D: Azure Event Hub does not have duplicate detection
 
 Pregunta 2:
 
@@ -116,11 +116,11 @@ Correct Answer: Box 1:Create a single Service Bus Namespace
 
 Explanation/Reference: 
 
-Explanation: Box 1: Create a single Service Bus Namespace To begin using Service Bus messaging entities in Azure, you must first create a namespace with a name that is unique across Azure. A namespace provides a scoping container for addressing Service Bus resources within your application. 
+	Explanation: Box 1: Create a single Service Bus Namespace To begin using Service Bus messaging entities in Azure, you must first create a namespace with a name that is unique across Azure. A namespace provides a scoping container for addressing Service Bus resources within your application. 
 
-Box 2: Create a Service Bus Topic for each restaurant for which a driver can receive messages. Create topics. 
+	Box 2: Create a Service Bus Topic for each restaurant for which a driver can receive messages. Create topics. 
 
-Box 3: Create a Service Bus subscription for each restaurant for which a driver can receive orders. Topics can have multiple, independent subscriptions.
+	Box 3: Create a Service Bus subscription for each restaurant for which a driver can receive orders. Topics can have multiple, independent subscriptions.
 
 Pregunta 3:
 
@@ -158,30 +158,30 @@ Correct Answer: C
 
 Explanation/Reference: 
 
-Explanation: A service bus instance has already been created (Step 2 below). Next is step 3, Create a Service Bus queue. 
+	Explanation: A service bus instance has already been created (Step 2 below). Next is step 3, Create a Service Bus queue. 
 
-Note: 
+	Note: 
 
-Steps: 
+	Steps: 
 
-Step 1: # Create a resource group 
+	Step 1: # Create a resource group 
 
-resourceGroupName="myResourceGroup" 
+	resourceGroupName="myResourceGroup" 
 
-az group create --name $resourceGroupName --location eastus 
+	az group create --name $resourceGroupName --location eastus 
 
-Step 2: # Create a Service Bus messaging namespace with a unique name 
+	Step 2: # Create a Service Bus messaging namespace with a unique name 
 
-namespaceName=myNameSpace$RANDOM 
+	namespaceName=myNameSpace$RANDOM 
 
-az servicebus namespace create --resource-group $resourceGroupName --name $namespaceName -- location eastus 
+	az servicebus namespace create --resource-group $resourceGroupName --name $namespaceName -- location eastus 
 
-Step 3: # Create a Service Bus queue 
+	Step 3: # Create a Service Bus queue 
 
-az servicebus queue create --resource-group $resourceGroupName --namespace-name 
+	az servicebus queue create --resource-group $resourceGroupName --namespace-name 
 
-$namespaceName --name BasicQueue 
+	$namespaceName --name BasicQueue 
 
-Step 4: # Get the connection string for the namespace connectionString=$(az servicebus namespace authorization-rule keys list --resource-group 
+	Step 4: # Get the connection string for the namespace connectionString=$(az servicebus namespace authorization-rule keys list --resource-group 
 
-$resourceGroupName --namespace-name $namespaceName --name RootManageSharedAccessKey -- query primaryConnectionString --output tsv)
+	$resourceGroupName --namespace-name $namespaceName --name RootManageSharedAccessKey -- query primaryConnectionString --output tsv)
