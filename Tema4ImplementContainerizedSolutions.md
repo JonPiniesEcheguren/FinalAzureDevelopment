@@ -59,15 +59,15 @@ Correct Answer: B
 
 Explanation/Reference: 
 
-Explanation: Azure Event Hub is used for telemetry and distributed data streaming. 
+	Explanation: Azure Event Hub is used for telemetry and distributed data streaming. 
 
-This service provides a single solution that enables rapid data retrieval for real-time processing as well as repeated replay of stored raw data. It can capture the streaming data into a file for processing and analysis. 
+	This service provides a single solution that enables rapid data retrieval for real-time processing as well as repeated replay of stored raw data. It can capture the streaming data into a file for processing and analysis. 
 
-It has the following characteristics: 
+	It has the following characteristics: 
 
-- low latency 
-- capable of receiving and processing millions of events per second 
-- at least once delivery
+	- low latency 
+	- capable of receiving and processing millions of events per second 
+	- at least once delivery
 
 **Pregunta 2:**
 
@@ -83,15 +83,15 @@ Correct Answer: Box 1:eventgrid
 
 Explanation/Reference: 
 
-Explanation: Box 1: eventgrid To create event subscription use: az eventgrid event-subscription create 
+	Explanation: Box 1: eventgrid To create event subscription use: az eventgrid event-subscription create 
 
-Box 2: event-subscription 
+	Box 2: event-subscription 
 
-Box 3: servicebusqueue 
+	Box 3: servicebusqueue 
 
-Scenario: Azure Service Bus and Azure Event Grid 
+	Scenario: Azure Service Bus and Azure Event Grid 
 
-Azure Event Grid must use Azure Service Bus for queue-based load leveling. Events in Azure Event Grid must be routed directly to Service Bus queues for use in buffering. Events from Azure Service Bus and other Azure services must continue to be routed to Azure Event Grid for processing.
+	Azure Event Grid must use Azure Service Bus for queue-based load leveling. Events in Azure Event Grid must be routed directly to Service Bus queues for use in buffering. Events from Azure Service Bus and other Azure services must continue to be routed to Azure Event Grid for processing.
 
 **Pregunta 3:**
 
@@ -115,10 +115,10 @@ Correct Answer: B
 
 Explanation/Reference: 
 
-Explanation: You need to catch the triggered event, so move the photo processing to an Azure Function triggered from the blob upload 
+	Explanation: You need to catch the triggered event, so move the photo processing to an Azure Function triggered from the blob upload 
 
-Note: Azure Storage events allow applications to react to events. Common Blob storage event scenarios include image or video processing, search indexing, or any file-oriented workflow. 
+	Note: Azure Storage events allow applications to react to events. Common Blob storage event scenarios include image or video processing, search indexing, or any file-oriented workflow. 
 
-Events are pushed using Azure Event Grid to subscribers such as Azure Functions, Azure Logic Apps, or even to your own http listener. 
+	Events are pushed using Azure Event Grid to subscribers such as Azure Functions, Azure Logic Apps, or even to your own http listener. 
 
-Note: Only storage accounts of kind StorageV2 (general purpose v2) and BlobStorage support event integration. Storage (general purpose v1) does not support integration with Event Grid.
+	Note: Only storage accounts of kind StorageV2 (general purpose v2) and BlobStorage support event integration. Storage (general purpose v1) does not support integration with Event Grid.
