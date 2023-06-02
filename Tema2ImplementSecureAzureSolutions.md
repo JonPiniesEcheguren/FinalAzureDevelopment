@@ -1,6 +1,6 @@
 ### Tema 2: Implement secure Azure solutions	
 
-- [ ] Preguntas:	
+- Preguntas:	
 
   - ¿Qué es Azure Key Vault y cómo se utiliza para proteger secretos y claves criptográficas?	
 

@@ -1,6 +1,6 @@
 ### Tema 5:	Implement API Management
 
-- [ ] Preguntas:		
+- Preguntas:		
 
   - ¿Qué es Azure API Management y cuál es su propósito en el desarrollo de aplicaciones?	
 
