@@ -88,10 +88,11 @@
   
     Hot Area:
   
-    ![image-20230602130914944](C:\Users\Jon Pinies\AppData\Roaming\Typora\typora-user-images\image-20230602130914944.png)
+    ![Tema1-Imagen1](imagenes/Tema1Imagen1.png)
   
     Respuesta correcta:
   
-    ![image-20230602130942684](C:\Users\Jon Pinies\AppData\Roaming\Typora\typora-user-images\image-20230602130942684.png)
+    ![Tema1-Imagen2](imagenes/Tema1Imagen2.png)
   
     **Explicación:**
+    
