@@ -28,6 +28,27 @@
 
   - Pregunta 2 pág 64:
 
-  - Pregunta 6 pág 135:
+    - La pregunta plantea la necesidad de almacenar los acuerdos de usuario después de que se completen. La respuesta correcta es la opción B: Azure Event Hub.
 
+      Esto es asi porque Azure Event Hub se utiliza para la transmisión de datos distribuida y telemetría. Este servicio permite la captura y el procesamiento en tiempo real de datos en streaming, así como la posibilidad de reproducir los datos almacenados en forma de eventos.
+  
+      Almacenar los acuerdos de usuario en Azure Event Hub proporciona varias ventajas. Este servicio tiene baja latencia, lo que significa que los datos pueden procesarse rápidamente. También es capaz de recibir y procesar millones de eventos por segundo, lo que lo hace adecuado para manejar grandes volúmenes de acuerdos de usuario. Además, ofrece una entrega al menos una vez, lo que garantiza que los acuerdos no se perderán durante el proceso de almacenamiento.
+  
+  - Pregunta 6 pág 135:
+  
+    - La pregunta plantea la necesidad de configurar la integración entre Azure Service Bus y Event Grid. Se pregunta cuáles son las configuraciones adecuadas para Azure Service Bus. La respuesta correcta es la opción: tier Premium y RBAC role Contributor.
+  
+      La elección de Premium Tier se debe a que el Service Bus Premium permite emitir eventos a Event Grid cuando hay mensajes en una cola o suscripción, incluso cuando no hay receptores presentes. Esta característica permite utilizar Service Bus en modelos de programación reactiva.
+  
+      Además, se debe utilizar el rol Contributor en el campo "RBAC role" para tener acceso y permisos adecuados sobre el namespace de Service Bus. El rol Contributor permite realizar acciones y gestionar recursos dentro del namespace de Service Bus.
+  
   - Pregunta 6 pág 147:
+  
+    - La pregunta plantea el escenario de desarrollar una aplicación que permite a los usuarios cargar fotos y videos en Azure Storage. La aplicación utiliza una llamada a la API REST de almacenamiento para cargar los medios en una cuenta de almacenamiento de blobs llamada Account1. Hay dos contenedores de almacenamiento de blobs llamados Container1 y Container2.
+  
+      La carga de videos ocurre de forma irregular y se requiere copiar blobs específicos de Container1 a Container2 cuando se cargue un nuevo video.
+  
+      La respuesta correcta es la opción B: Crear un tema de Event Grid que utiliza el cmdlet Start-AzureStorageBlobCopy.
+  
+      La opción B es la correcta porque el cmdlet Start-AzureStorageBlobCopy permite iniciar la operación de copia de un blob. En este caso, se puede utilizar este cmdlet para copiar blobs específicos de Container1 a Container2 cuando se cargue un nuevo video. Al crear un tema de Event Grid que utilice este cmdlet, se puede configurar la lógica para que se ejecute automáticamente cada vez que se cargue un nuevo video, lo que activará la copia de los blobs necesarios.
+  

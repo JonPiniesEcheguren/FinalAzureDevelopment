@@ -35,6 +35,27 @@
     - Puedes utilizar la identidad administrada para acceder a otros servicios de Azure, como Azure Key Vault, y obtener los secretos y las claves necesarias para que tu aplicación funcione.
   
 - Identificar y explicar (comprobar si es posible) de la batería de Preguntas 3 preguntas por cada integrante relacionadas con Azure solutions:
-  - Pregunta 2 pág 128: 
-  - Pregunta 21 pág 159:
+  - Pregunta 2 pág 128:
+  
+    - Esta pregunta está relacionada con la corrección de un error en el sitio web de una empresa. La respuesta correcta es realizar cuatro acciones en secuencia:
+  
+      1. Generar un certificado.
+      2. Subir el certificado al Azure Key Vault (un servicio de almacenamiento de claves en la nube de Azure).
+      3. Importar el certificado al Azure App Service (un servicio de alojamiento web en la nube de Azure).
+      4. Actualizar la línea SC05 del archivo security.cs para incluir la gestión de errores y luego volver a implementar el código.
+  
+      La respuesta es correcta porque aborda el problema de manera lógica y secuencial. Primero se genera el certificado necesario, luego se almacena de forma segura en Azure Key Vault, después se importa al Azure App Service y finalmente se actualiza el código para manejar el error específico que se está produciendo.
+  
+      Este enfoque asegura que el certificado esté disponible y protegido correctamente, y también aborda el problema de la excepción criptográfica que se muestra en el sitio web.
+  - Pregunta 21 pág 161:
+  
+    - La pregunta plantea el escenario de tener una aplicación que incluye una aplicación web de Azure y varias aplicaciones de Azure Functions. Los secretos de la aplicación, como las cadenas de conexión y los certificados, se almacenan en Azure Key Vault. Se requiere diseñar un enfoque para cargar los secretos de la aplicación. La respuesta correcta es la opción C: Crear una identidad administrada asignada por el sistema en cada App Service con permiso para acceder a Key Vault, y es correcta porque permite utilizar las referencias de Azure Key Vault en las App Service y Azure Functions. Las referencias de Key Vault actualmente solo admiten identidades administradas asignadas por el sistema, no se pueden usar identidades asignadas por el usuario.
   - Pregunta 22 pág 161:
+  
+    - La pregunta plantea el escenario de desarrollar un sitio web de gestión de documentos de registros médicos. El sitio web se utiliza para almacenar copias escaneadas de formularios de admisión de pacientes. Si estas formas de admisión almacenadas son descargadas por un tercero, el contenido de los formularios no debe comprometerse.
+  
+      La respuesta correcta es la opción A: Sí, la solución cumple con el objetivo.
+  
+      La solución propuesta consiste en crear una clave de Azure Key Vault llamada "skey", encriptar los formularios de admisión utilizando la parte de clave pública de "skey" y almacenar los datos encriptados en Azure Blob storage.
+  
+      Esta solución cumple con el objetivo de no comprometer el contenido de los formularios si son descargados por un tercero. Al encriptar los formularios utilizando una clave almacenada en Azure Key Vault y luego almacenar los datos encriptados en Azure Blob storage, se asegura que solo aquellos que tengan acceso a la clave privada correspondiente puedan descifrar y acceder al contenido de los formularios. Esto proporciona una capa adicional de seguridad para proteger la información confidencial de los pacientes.
